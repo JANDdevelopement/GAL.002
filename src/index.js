@@ -1,5 +1,8 @@
+import dotenv from "dotenv";
 import { Client, GatewayIntentBits } from "discord.js";
 import { Configuration, OpenAIApi } from "openai";
+
+dotenv.config();
 
 const client = new Client({
     intents: [
@@ -12,13 +15,13 @@ const client = new Client({
 });
 
 const openai = new OpenAIApi(new Configuration({
-    apiKey: "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",
+    apiKey: process.env.OPENAI_API_KEY,
   })
 );
 
 client.on('ready', () => {
     console.log('Der client ist bereit!');
-    client.users.fetch('454717869620461592')
+    client.users.fetch(process.env.DISCORD_ID)
     .then(user => user.send('Ich bin jetzt online!'))
     .catch(console.error);
 });
@@ -26,7 +29,7 @@ client.on('ready', () => {
 client.on("messageCreate", async function (message) {
     if (message.author.bot) return;
     console.log(`MSG - ${message.content}`)
-    if (!message.content.startsWith("<@1091849328924037272>")) return;
+    if (!message.content.startsWith(`<@${process.env.BOT_ID}>`)) return;
     
     try {
         const response = await openai.createChatCompletion({
@@ -41,9 +44,9 @@ client.on("messageCreate", async function (message) {
   
     } catch (err) {
         return message.reply(
-          "As an AI robot, I errored out."
+          "Error301"
         );
     }
 });
 
-client.login("MTA5MTg0OTMyODkyNDAzNzI3Mg.GDptdA.uLYokQLbAlIOh7AtomqNUci6DiMtvk5E91IbUI");
+client.login(process.env.BOT_TOKEN);
