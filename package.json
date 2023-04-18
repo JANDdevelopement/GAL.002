@@ -1,0 +1,17 @@
+{
+  "name": "gal.002",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ChatGPT in Discord",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "Mr. Galaxy | Chris#0726",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "node-persist": "^3.1.3",
+    "openai": "^3.2.1"
+  }
+}
