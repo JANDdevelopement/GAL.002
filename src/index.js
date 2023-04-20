@@ -1,9 +1,11 @@
 import dotenv from "dotenv";
 import { Client, GatewayIntentBits, Partials } from "discord.js";
 import { Configuration, OpenAIApi } from "openai";
-
+import fs from "fs";
+// Use the .env
 dotenv.config();
 
+// Create a new client
 const client = new Client({
     partials: [Partials.Channel, Partials.User, Partials.Message, Partials.Reaction, Partials.GuildMember],
     intents: [
@@ -15,28 +17,106 @@ const client = new Client({
     ],
 });
 
-
+// Connect to openai
 const openai = new OpenAIApi(new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
   })
 );
 
+// Überprüft ob die Dateien zum speichern der arrays existieren 
+const pathask = './src/data/donotask';
+const pathstart = './src/data/startup';
+
+if (!fs.existsSync(pathask)) {
+  fs.writeFile(pathask, '', function (err) {
+    if (err) throw err;
+    console.log('New empty array file created!\nPlease restart the system.');
+  });
+} else console.log("File exists 1")
+
+if (!fs.existsSync(pathstart)) {
+  fs.writeFile(pathstart, '454717869620461592', function (err) {
+    if (err) throw err;
+    console.log('New empty array file created!\nPlease restart the system.');
+  });
+}else console.log("File exists 2")
+
+
+// Wenn der Bot startet.
 client.on('ready', () => {
     console.log('Der client ist bereit!');
-    client.users.fetch(process.env.DISCORD_ID)
-    .then(user => user.send('Ich bin jetzt online!'))
-    .catch(console.error);
+    for (let id of startup) {
+      const user = client.users.fetch(id)
+      .then(user => user.send(`Der Bot ist nun hochgefahren.`))
+      .catch(console.error)
+    }
 });
 
+// arrays
+const donotask = ["1091849328924037272" ]
+const startup = []
+fs.readFile(pathask, function(err, data) {
+    if(err) throw err;
+    var donotask1 = data.toString().split("\n")
+    for(let i in donotask1) {
+      donotask.push(donotask1[i])
+    }
+})
+fs.readFile(pathstart, function(err, data) {
+  if(err) throw err;
+  var startup1 = data.toString().split(",")
+  for(let i in startup1) {
+    startup.push(startup1[i])
+  }
+})
+
+// Nachrichten managen
 client.on("messageCreate", async function (message) {
     if (message.author.bot) {
       console.log(`${message.author.username}: ${message.content}`)
-
     }
     if (message.author.bot) return;
     console.log(`${message.author.username} - ${message.content}`)
     // Antwort auf DMs
     if (message.guild === null) {
+      if (!donotask.includes(message.author.id)) {
+        console.log(`User ${message.author.username} was not asked before. Gonna proceed.`)
+        message.reply(`Möchtest du beim Start der Bots benachrichtigt werden? Antworte mit "!ja", wenn du das möchtest.`)
+        // Setzt eine neue Zeile in die TXT
+        let content = `${message.author.id}`;
+        content += "\n";
+        fs.appendFile(pathask, content, (err) => {
+         return console.log(err);
+        });
+        // Arrays aktualisieren
+        fs.readFile(pathask, function(err, data) {
+          if(err) throw err;
+          var donotask1 = data.toString().split("\n")
+          for(let i in donotask1) {
+            donotask.push(donotask1[i])
+          }
+        })
+        return;
+      }
+      if (message.content.startsWith("!ja")) {
+        console.log(`Ein neuer Nutzer zur Startup Liste hinzugefügt. ${message.author.username}`)
+        message.reply(`Du wirst nun beim Start benachrichtigt.`)
+        // Setzt eine neue Zeile in die TXT
+        let content1 = `,${message.author.id}`;
+
+        fs.appendFile(pathstart, content1, (err) => {
+         return console.log(err);
+        });
+        // Arrays aktualisieren
+        fs.readFile(pathstart, function(err, data) {
+          if(err) throw err;
+          var startup1 = data.toString().split(",")
+          for(let i in startup1) {
+            startup.push(startup1[i])
+          }
+        })
+        return;
+      }
       try {
         const response = await openai.createChatCompletion({
           model: "gpt-3.5-turbo",
