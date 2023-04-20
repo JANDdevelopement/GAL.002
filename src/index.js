@@ -28,8 +28,13 @@ client.on('ready', () => {
     .catch(console.error);
 });
 
-const asked = [ "1091849328924037272", "Eintrag 2", "Eintrag 3" ]
-asked.push("Neuer Eintrag")
+const asked = [ "1091849328924037272", "345325408792608768" ]
+asked.push('${message.author.id}')
+client.on("messageCreate", async function (message) { 
+if (message.author.id !== asked) {
+message.reply("Hier sollte etwas anderes stehen. Wenn du diese Nachricht siehst, schicke dem Dev bitte dass du Error407 gefunden hast.")
+}
+}
 
 client.on("messageCreate", async function (message) {
     if (message.author.bot) {
