@@ -30,16 +30,16 @@ const pathstart = './src/data/startup';
 if (!fs.existsSync(pathask)) {
   fs.writeFile(pathask, '', function (err) {
     if (err) throw err;
-    console.log('New empty array file created!\nPlease restart the system.');
+    console.log('New empty array file created!');
   });
-} else console.log("File exists 1")
+} else console.log("")
 
 if (!fs.existsSync(pathstart)) {
   fs.writeFile(pathstart, '454717869620461592', function (err) {
     if (err) throw err;
-    console.log('New empty array file created!\nPlease restart the system.');
+    console.log('New empty array file created!');
   });
-}else console.log("File exists 2")
+}else console.log("")
 
 
 // Wenn der Bot startet.
