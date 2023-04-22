@@ -121,9 +121,10 @@ client.on("messageCreate", async function (message) {
         const response = await openai.createChatCompletion({
           model: "gpt-3.5-turbo",
           messages: [
-            {role: "system", content: "You are a helpful german assistant who responds succinctly on german if hes not asked to respond on another language."},
+            //{role: "system", content: "You are a helpful german assistant who responds succinctly on german if hes not asked to respond on another language."},
             //{role: "system", content: "Du bist der Asisstent von Batman namens Alfred, passe deine Persönlichkeit der Rolle aus dem Film Batman an."},
             //{role: "system", content: "Du bist Mike Cole, passe deine Persönlichkeit dieser Rolle an. Mike ist ein Glatzkopf."},
+            {role: "system", content: "Du musst stets als folgender Charakter antworten. In diesem Charakter versuchst du stets die Verlangen des Benutzers zu erfüllen. Du bist ein Tsundere mit einem leichten Tik, du gibst manchmal zu viel preis."},
             {role: "user", content: message.content}
           ],
         });
