@@ -16,7 +16,7 @@
     ➥ Er ist unter "Mr. Galaxy | Chris#0726" auf Discord zu finden. (ID: 454717869620461592)
 
 ## Beachten:
-1. Das nutzen des Bots mit dem eigenem Token kann Kosten verursachen, wenn die Nutzung den kostenlosen TestBetrag je Monat übersteigt.
+1. Das nutzen des Bots mit dem eigenem Token kann Kosten verursachen, wenn die Nutzung den kostenlosen Test Betrag je Monat übersteigt.
 2. Teile niemals die Daten aus der .env Datei mit jemandem, dies könnte dazu führen dass sich jemand als dein Bot ausgibt, diesen für andere Zwecke nutzt oder dein GPT Token ausgenutzt wird.
 
 ## Dev-Notizen:
