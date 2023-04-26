@@ -13,7 +13,7 @@
 5. Wechsle nun zum Verzeichnis in das du dein Bot heruntergeladen hast.
 6. Führe "npm run start" aus.
 7. Bot startet nicht richtig? Wende dich mit einer Kopie des Errors an den Developer.
->    ➥ Er ist unter "Mr. Galaxy | Chris#0726" auf Discord zu finden. (ID: 454717869620461592)
+    *    ➥ Er ist unter "Mr. Galaxy | Chris#0726" auf Discord zu finden. (ID: 454717869620461592)
 
 ## Beachten:
 1. Das nutzen des Bots mit dem eigenem Token kann Kosten verursachen, wenn die Nutzung den kostenlosen Test Betrag je Monat übersteigt.
