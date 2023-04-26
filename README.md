@@ -5,10 +5,12 @@
 1. Lade die Repository auf deinen PC herunter.
 2. Erstelle eine Datei mit dem Namen ".env" und kopiere den Inhalt aus der Datei mit dem Namen ".env.example" in diese Datei.
 3. Ersetze die Platzhalter durch deine Werte.
->    ➥ GPT_TOKEN <- Dein API Token, das du auf https://platform.openai.com/account/api-keys finden kannst.
->    ➥ DICORD_TOKEN  <- Besuche https://discord.com/developers/applications , logge dich ein und erstelle eine APP. 
->    Nun klicke auf die APP  und wechsle innerhalb dieser zu dem Sektor "Bot". Es kann sein, dass du bestätigen musst einen neuen zu erstellen. Kopiere dir hier nun das Token, welches du unter dem Namen findest.
->    ➥ BOT_USER_ID <- Wechsle nun wieder zum "General Information" Sektor und kopiere dir die Application ID.
+```
+    ➥ GPT_TOKEN <- Dein API Token, das du auf https://platform.openai.com/account/api-keys finden kannst.
+    ➥ DICORD_TOKEN  <- Besuche https://discord.com/developers/applications , logge dich ein und erstelle eine APP. 
+    Nun klicke auf die APP  und wechsle innerhalb dieser zu dem Sektor "Bot". Es kann sein, dass du bestätigen musst einen neuen zu erstellen. Kopiere dir hier nun das Token, welches du unter dem Namen findest.
+    ➥ BOT_USER_ID <- Wechsle nun wieder zum "General Information" Sektor und kopiere dir die Application ID.
+```
 4. Stelle sicher dass du "node" und "NPM" installiert hast.
 5. Wechsle nun zum Verzeichnis in das du dein Bot heruntergeladen hast.
 6. Führe "npm run start" aus.
