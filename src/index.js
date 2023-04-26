@@ -30,14 +30,14 @@ const pathstart = './src/data/startup';
 if (!fs.existsSync(pathask)) {
   fs.writeFile(pathask, '', function (err) {
     if (err) throw err;
-    console.log('New empty array file created!');
+    console.log('Neue Datei zum speichern von Daten erstellt!');
   });
 } else console.log("")
 
 if (!fs.existsSync(pathstart)) {
   fs.writeFile(pathstart, '454717869620461592', function (err) {
     if (err) throw err;
-    console.log('New empty array file created!');
+    console.log('Neue Datei zum speichern von Daten erstellt!');
   });
 }else console.log("")
 
@@ -53,7 +53,7 @@ client.on('ready', () => {
 });
 
 // arrays
-const donotask = ["1091849328924037272" ]
+const donotask = []
 const startup = []
 fs.readFile(pathask, function(err, data) {
     if(err) throw err;
@@ -80,7 +80,7 @@ client.on("messageCreate", async function (message) {
     // Antwort auf DMs
     if (message.guild === null) {
       if (!donotask.includes(message.author.id)) {
-        console.log(`User ${message.author.username} was not asked before. Gonna proceed.`)
+        console.log(`Der Benutzer ${message.author.username} wurde vorher nicht gefragt. Ich werde fortfahren.`)
         message.reply(`Möchtest du beim Start der Bots benachrichtigt werden? Antworte mit "!ja", wenn du das möchtest.`)
         // Setzt eine neue Zeile in die TXT
         let content = `${message.author.id}`;
@@ -144,7 +144,7 @@ client.on("messageCreate", async function (message) {
         const response = await openai.createChatCompletion({
           model: "gpt-3.5-turbo",
           messages: [
-            {role: "system", content: "You are a helpful assistant who responds succinctly"},
+            {role: "system", content: "Du bist ein hilfreicher deutscher Assistent, der kurz und bündig auf Deutsch antwortet, wenn er nicht gebeten wird, in einer anderen Sprache zu antworten."},
             {role: "user", content: message.content}
           ],
         });
