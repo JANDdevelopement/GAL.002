@@ -152,6 +152,7 @@ client.on("messageCreate", async function (message) {
         return message.reply(content);
   
     } catch (err) {
+        console.log(err)
         return message.reply(
           "Error302"
         );
