@@ -23,3 +23,4 @@
 1. Bot könnte beim Starten crashen wenn er sich selbst nach einer Nachricht fragen möchte ob er benachrichtigt werden möchte.
 2. Identity Kommentare aus Index entfernen.
 3. Persönlichkeit auswählbar machen vom Nutzer.
+4. node_nodules in Gitignore aufnehmen (Readme überarbeiten)
