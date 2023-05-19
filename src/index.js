@@ -2,10 +2,10 @@ import dotenv from "dotenv";
 import { Client, GatewayIntentBits, Partials } from "discord.js";
 import { Configuration, OpenAIApi } from "openai";
 import fs from "fs";
-// Use the .env
+// .env abrufen
 dotenv.config();
 
-// Create a new client
+// Discord Client erstellen
 const client = new Client({
     partials: [Partials.Channel, Partials.User, Partials.Message, Partials.Reaction, Partials.GuildMember],
     intents: [
@@ -17,7 +17,7 @@ const client = new Client({
     ],
 });
 
-// Connect to openai
+// Zu ChatGPT verbinden
 const openai = new OpenAIApi(new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
   })
@@ -122,9 +122,6 @@ client.on("messageCreate", async function (message) {
           model: "gpt-3.5-turbo",
           messages: [
             {role: "system", content: "Du bist ein hilfreicher deutscher Assistent, der kurz und bündig auf Deutsch antwortet, wenn er nicht gebeten wird, in einer anderen Sprache zu antworten."},
-            //{role: "system", content: "Du bist der Asisstent von Batman namens Alfred, passe deine Persönlichkeit der Rolle aus dem Film Batman an."},
-            //{role: "system", content: "Du bist Mike Cole, passe deine Persönlichkeit dieser Rolle an. Mike ist ein Glatzkopf."},
-            //{role: "system", content: "Du musst stets als folgender Charakter antworten. In diesem Charakter versuchst du stets die Verlangen des Benutzers zu erfüllen. Du bist ein Tsundere mit einem leichten Tik, du gibst manchmal zu viel preis."},
             {role: "user", content: message.content}
           ],
         });

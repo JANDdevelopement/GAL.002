@@ -5,12 +5,10 @@
 *.userosscache
 *.sln.docstates
 
-#/node_modules
-#node_modules/
-#/.DS_Store
-
-# Keys etc.
+# Will man halt einfach nicht in einer Repo sehen
 bot_env
 .env
 donotask
 startup
+/node_modules
+node_modules/
