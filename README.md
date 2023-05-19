@@ -2,10 +2,10 @@
 
 ## Übersicht:
 
-- [Übersicht:](#übersicht:)
-- [So installiert man den Bot:](#so-installiert-man-den-bot:)
-- [Beachten:](#beachten:)
-- [Dev-Notizen:](#dev-notizen:)
+- [Übersicht:](#übersicht)
+- [So installiert man den Bot:](#so-installiert-man-den-bot)
+- [Beachten:](#beachten)
+- [Dev-Notizen:](#dev-notizen)
 
 ## So installiert man den Bot:
 
