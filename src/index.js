@@ -35,7 +35,7 @@ if (!fs.existsSync(pathask)) {
 } else console.log("")
 
 if (!fs.existsSync(pathstart)) {
-  fs.writeFile(pathstart, '454717869620461592', function (err) {
+  fs.writeFile(pathstart, '', function (err) {
     if (err) throw err;
     console.log('Neue Datei zum speichern von Daten erstellt!');
   });
@@ -46,9 +46,11 @@ if (!fs.existsSync(pathstart)) {
 client.on('ready', () => {
     console.log('Der client ist bereit!');
     for (let id of startup) {
-      const user = client.users.fetch(id)
-      .then(user => user.send(`Der Bot ist nun hochgefahren.`))
-      .catch(console.error)
+      if(id !== ""){
+        const user = client.users.fetch(id)
+        .then(user => user.send(`Der Bot ist nun hochgefahren.`))
+        .catch(console.error)
+      }
     }
 });
 
