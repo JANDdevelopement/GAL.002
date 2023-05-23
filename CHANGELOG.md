@@ -16,6 +16,7 @@ In der Index wurde bei den betreffenden Zeilen "process.env.PERSONALITY" genutzt
 Die .env.example wurde um zwei Zeilen erweiter.
 Die README.md wurde ergänzt um Nutzern die Funktion zu erklären.
 ```
+Version 1.1.1 am 23.05.2023 ~ Chris
 
 ## Version 1.1.0
 Ein kleiner Error Catcher wurde hinzugefügt. 
@@ -27,6 +28,8 @@ Die node_modules wurden von Github entfernt.
 
 Nach einem Test wurden einige Stellen in der index gefixt und die Anweisungen in der README.md wurden präziser formulliert. 
 Außerdem wurden in der Anleitung mehr Hyperlinks genutzt um das finden der gewünschten Seiten schneller zu machen.
+
+Version 1.1.0 am 19.05.2023 ~ Chris
 
 ## Version 1.0.0
 Der Bot ist soweit in den grundlegenden Features fertig und kann von Nutzern genutzt werden.
