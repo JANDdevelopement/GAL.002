@@ -1,6 +1,6 @@
 {
   "name": "gal.002",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "type": "module",
   "description": "ChatGPT in Discord",
   "main": "./src/index.js",

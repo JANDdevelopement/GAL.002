@@ -16,6 +16,7 @@
     *    ➥ GPT_TOKEN <- Dein API Token, das du [hier](https://platform.openai.com/account/api-keys) finden kannst.
     *    ➥ DICORD_TOKEN  <- Besuche [diese Webseite](https://discord.com/developers/applications) und folge dieser [Anleitung](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot). Kopiere dir das Token aus [diesem Abschnitt.](https://discordjs.guide/preparations/setting-up-a-bot-application.html#your-bot-s-token)
     *    ➥ BOT_USER_ID <- Wechsle nun wieder zum "General Information" Sektor und kopiere dir die **Application ID**.
+    *    ➥ PERSONALITY <- Stelle ein als welche Rolle dein Bot antworten soll (z.B.: Alfred / Batman / Pinnochio / ...).
 5. Stelle sicher dass dein Bot im Discord Developer Portal alle Intents aktiviert hat (unter dem BOT Reiter an der linken Seite).
 6. Stelle sicher dass du ["node"](https://nodejs.org/en) und ["NPM"](https://www.npmjs.com) installiert hast. Für ein Tutorial klicke [hier](https://phoenixnap.com/kb/install-node-js-npm-on-windows).
 7. Wechsle nun in einem Terminal zum Verzeichnis / Dateipfad in das du die Repository heruntergeladen hast. Dieser Ordner sollte etwas mit "Gal.002" heißen, nicht etwa "src" oder "data".
@@ -32,5 +33,3 @@
 
 ## Dev-Notizen:
 1. Bot könnte beim Starten crashen wenn er sich selbst nach einer Nachricht fragen möchte ob er benachrichtigt werden möchte. Tritt dies auf starte den Bot einfach neu.
-2. To-Do: Persönlichkeit auswählbar machen vom Nutzer.
-3. To-Do: Neue Github Repo?

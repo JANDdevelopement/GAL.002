@@ -123,7 +123,7 @@ client.on("messageCreate", async function (message) {
         const response = await openai.createChatCompletion({
           model: "gpt-3.5-turbo",
           messages: [
-            {role: "system", content: "Du bist ein hilfreicher deutscher Assistent, der kurz und bündig auf Deutsch antwortet, wenn er nicht gebeten wird, in einer anderen Sprache zu antworten."},
+            {role: "system", content: `${process.env.PERSONALITY}`},
             {role: "user", content: message.content}
           ],
         });
@@ -143,7 +143,7 @@ client.on("messageCreate", async function (message) {
         const response = await openai.createChatCompletion({
           model: "gpt-3.5-turbo",
           messages: [
-            {role: "system", content: "Du bist ein hilfreicher deutscher Assistent, der kurz und bündig auf Deutsch antwortet, wenn er nicht gebeten wird, in einer anderen Sprache zu antworten."},
+            {role: "system", content: `${process.env.PERSONALITY}`},
             {role: "user", content: message.content}
           ],
         });
