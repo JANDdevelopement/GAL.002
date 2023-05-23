@@ -6,6 +6,7 @@
 - [So installiert man den Bot:](#so-installiert-man-den-bot)
 - [Beachten:](#beachten)
 - [Dev-Notizen:](#dev-notizen)
+- [Changelog:](#dev-notizen)
 
 ## So installiert man den Bot:
 
@@ -33,3 +34,6 @@
 
 ## Dev-Notizen:
 1. Bot könnte beim Starten crashen wenn er sich selbst nach einer Nachricht fragen möchte ob er benachrichtigt werden möchte. Tritt dies auf starte den Bot einfach neu.
+
+## Changelog:
+Ein Changelog, was zwischen den Versionen passiert ist kann [hier](CHANGELOG.md) abgerufen werden
