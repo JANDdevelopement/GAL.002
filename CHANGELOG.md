@@ -15,6 +15,8 @@ Die "/serverliste" und "/uptime" Befehle wurden hinzugefügt (/serverliste ist n
 Datei deploy-commands.js erstellt. Und Script "deploy" wurde hinzugefügt, die README.md wurde dementsprechend ergänzt.
 Ein Tippfehler in der CHANGELOG.md wurde korrigiert.
 
+To-Do: deploy-commands.js ist noch nicht auf ES module optimiert.
+
 ## Version 1.1.1
 CHANGELOG.md wurde erstellt.
 Persönlichkeit in der .env einstellbar.
