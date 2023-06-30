@@ -8,7 +8,7 @@ module.exports = {
     run: async ({ interaction }) => {
         const guilds = interaction.client.guilds.cache;
         const guildList = guilds.map(guild => `- ${guild.name} (ID: ${guild.id})`);
-        if(interaction.user.id !== client.conf.botownerId){ return interaction.editReply(client.conf.nopermission)}
+        if(interaction.user.id !== process.env.BOT_OWNER){ return interaction.editReply("Du kannst diesen Befehl nicht ausführen.")}
         return interaction.editReply({embeds: [
             new EmbedBuilder()
                 .setTitle(`Serverlist:`)
