@@ -3,9 +3,17 @@
 ## Übersicht:
 
 - [Übersicht:](#übersicht)
+- [Version 1.1.2](#version-112)
 - [Version 1.1.1](#version-111)
 - [Version 1.1.0](#version-110)
 - [Version 1.0.0](#version-100)
+
+## Version 1.1.2
+Das Fundament für Slash Commands wurde vorbereitet.
+Ein Error Catcher für "interactionCreate" wurde hinzugefügt.  
+Die "/serverliste" und "/uptime" Befehle wurden hinzugefügt (/serverliste ist nur für den Bot Owner verfügbar). Hierfür wurde auch ein "commands" Ordner im "src" Verzeichtnis erstellt.       
+Datei deploy-commands.js erstellt. Und Script "deploy" wurde hinzugefügt, die README.md wurde dementsprechend ergänzt.
+Ein Tippfehler in der CHANGELOG.md wurde korrigiert.
 
 ## Version 1.1.1
 CHANGELOG.md wurde erstellt.
@@ -13,7 +21,7 @@ Persönlichkeit in der .env einstellbar.
 Beschreibung was gemacht wurde: 
 ```
 In der Index wurde bei den betreffenden Zeilen "process.env.PERSONALITY" genutzt.
-Die .env.example wurde um zwei Zeilen erweiter.
+Die .env.example wurde um zwei Zeilen erweitert.
 Die README.md wurde ergänzt um Nutzern die Funktion zu erklären.
 ```
 Version 1.1.1 am 23.05.2023 ~ Chris
