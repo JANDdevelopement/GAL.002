@@ -15,7 +15,7 @@
 3. Erstelle eine Datei mit dem Namen ".env" und kopiere den Inhalt aus der Datei mit dem Namen ".env.example" in diese Datei (im selben Ordner).
 4. Ersetze die Platzhalter in der ".env" Datei durch deine Werte.
     *    ➥ GPT_TOKEN <- Dein API Token, das du [hier](https://platform.openai.com/account/api-keys) finden kannst.
-    *    ➥ DICORD_TOKEN  <- Besuche [diese Webseite](https://discord.com/developers/applications) und folge dieser [Anleitung](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot). Kopiere dir das Token aus [diesem Abschnitt.](https://discordjs.guide/preparations/setting-up-a-bot-application.html#your-bot-s-token)
+    *    ➥ DISCORD_TOKEN  <- Besuche [diese Webseite](https://discord.com/developers/applications) und folge dieser [Anleitung](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot). Kopiere dir das Token aus [diesem Abschnitt.](https://discordjs.guide/preparations/setting-up-a-bot-application.html#your-bot-s-token)
     *    ➥ BOT_USER_ID <- Wechsle nun wieder zum "General Information" Sektor und kopiere dir die **Application ID**.
     *    ➥ PERSONALITY <- Stelle ein als welche Rolle dein Bot antworten soll (z.B.: Alfred / Batman / Pinnochio / ...).
 5. Stelle sicher dass dein Bot im Discord Developer Portal alle Intents aktiviert hat (unter dem BOT Reiter an der linken Seite).
