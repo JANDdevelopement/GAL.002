@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { Client, GatewayIntentBits, Partials } from "discord.js";
+import { Client, GatewayIntentBits, Collection, Partials } from "discord.js";
 import { Configuration, OpenAIApi } from "openai";
 import fs from "fs";
 // .env abrufen
