@@ -1,11 +1,12 @@
 {
   "name": "gal.002",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "type": "module",
   "description": "ChatGPT in Discord",
   "main": "./src/index.js",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/index.js",
+    "deploy": "node ./deploy-commands.js"
   },
   "author": "Mr. Galaxy | Chris#0726",
   "license": "ISC",

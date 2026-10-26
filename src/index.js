@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { Client, GatewayIntentBits, Partials } from "discord.js";
+import { Client, GatewayIntentBits, Collection, Partials } from "discord.js";
 import { Configuration, OpenAIApi } from "openai";
 import fs from "fs";
 // .env abrufen
@@ -16,6 +16,16 @@ const client = new Client({
         GatewayIntentBits.DirectMessages,
     ],
 });
+
+// Collections
+client.commands = new Collection(); // Slash Commands
+// Regeln fürs Datein Zuweisen
+const commandfiles = fs.readdirSync("./src/commands").filter(file => file.endsWith(".js"))
+// Datein Zuweisen
+commandfiles.forEach(commandfile => {
+    const command = require(`./commands/${commandfile}`)
+    client.commands.set(command.data.name, command)
+})
 
 // Zu ChatGPT verbinden
 const openai = new OpenAIApi(new Configuration({
@@ -159,6 +169,18 @@ client.on("messageCreate", async function (message) {
     } 
 });
 
+// Error Catcher
+client.on("interactionCreate", (interaction) => {
+  async function handleCommand() {
+      if (!interaction.isCommand()) return
 
+      const slashcmd = client.commands.get(interaction.commandName)
+      if (!slashcmd) interaction.reply(client.conf.Invalid)
+
+      await interaction.deferReply()
+      await slashcmd.run({ client, interaction })
+  }
+  handleCommand()
+})
 
 client.login(process.env.BOT_TOKEN);

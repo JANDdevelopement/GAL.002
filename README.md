@@ -22,11 +22,12 @@
 6. Stelle sicher dass du ["node"](https://nodejs.org/en) und ["NPM"](https://www.npmjs.com) installiert hast. Für ein Tutorial klicke [hier](https://phoenixnap.com/kb/install-node-js-npm-on-windows).
 7. Wechsle nun in einem Terminal zum Verzeichnis / Dateipfad in das du die Repository heruntergeladen hast. Dieser Ordner sollte etwas mit "Gal.002" heißen, nicht etwa "src" oder "data".
 8. Führe "npm install" aus, das lädt alle benötigten Pakete herunter, sofern du NPM installiert hast.
-9. Führe "npm run start" aus, dies startet den Bot.
-10. Bot startet nicht richtig? Wende dich mit einer Kopie des Errors (Wenn vorhanden) an den Developer.
+9. Füge deine Daten in die "deploy-commands.js" Datei ein und nutze "npm run deploy" um die / Befehle auf deinem Discord Server zu registrieren.
+10. Führe "npm run start" aus, dies startet den Bot.
+11. Bot startet nicht richtig? Wende dich mit einer Kopie des Errors (Wenn vorhanden) an den Developer.
     *    ➥ Er ist unter "Mr. Galaxy | Chris#0726" auf Discord zu finden. (ID: 454717869620461592)
     *    ➥ Findest du den Nutzer nicht? Ich bin auf diesem [Discord Server](https://discord.gg/EmScKUnaPe) zu finden.   
-11. Um deinen Bot nun per DM nutzen zu können, folge bitte folgender Anleitung: [Tutorial](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links). Nachdem der Bot dem Server beigetreten ist kannst du ihn ganz einfach eine Nachricht schicken.
+12. Um deinen Bot nun per DM nutzen zu können, folge bitte folgender Anleitung: [Tutorial](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links). Nachdem der Bot dem Server beigetreten ist kannst du ihn ganz einfach eine Nachricht schicken.
 
 ## Beachten:
 1. Das nutzen des Bots mit dem eigenem Token kann Kosten verursachen, wenn die Nutzung den kostenlosen Test Betrag im ersten Monat übersteigt, oder der erste Monat vorbei ist. [Checke deine Usage hier.](https://platform.openai.com/account/usage)
