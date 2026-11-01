@@ -1,12 +1,12 @@
-# GAL.002
+# GAL.002 [DEPRECATED]
 
 ## Übersicht:
 
 - [Übersicht:](#übersicht)
-- [So installiert man den Bot:](#so-installiert-man-den-bot)
-- [Beachten:](#beachten)
-- [Dev-Notizen:](#dev-notizen)
-- [Changelog:](#dev-notizen)
+- [So installiert man den Bot](#so-installiert-man-den-bot)
+- [Zu beachten](#beachten)
+- [Dev-Notizen](#dev-notizen)
+- [Changelog](#dev-notizen)
 
 ## So installiert man den Bot:
 
@@ -25,8 +25,7 @@
 9. Füge deine Daten in die "deploy-commands.js" Datei ein und nutze "npm run deploy" um die / Befehle auf deinem Discord Server zu registrieren.
 10. Führe "npm run start" aus, dies startet den Bot.
 11. Bot startet nicht richtig? Wende dich mit einer Kopie des Errors (Wenn vorhanden) an den Developer.
-    *    ➥ Er ist unter "Mr. Galaxy | Chris#0726" auf Discord zu finden. (ID: 454717869620461592)
-    *    ➥ Findest du den Nutzer nicht? Ich bin auf diesem [Discord Server](https://discord.gg/EmScKUnaPe) zu finden.   
+    *    ➥ Ich bin unter galaxy.chris auf diesem [Discord Server](https://discord.gg/EmScKUnaPe) zu finden.   
 12. Um deinen Bot nun per DM nutzen zu können, folge bitte folgender Anleitung: [Tutorial](https://discordjs.guide/preparations/adding-your-bot-to-servers.html#bot-invite-links). Nachdem der Bot dem Server beigetreten ist kannst du ihn ganz einfach eine Nachricht schicken.
 
 ## Beachten:
